@@ -6,7 +6,7 @@ Mysql一主多从配置
 centos 7.0
 tomcat 5.7
 
-1.	安装docker
+1.安装docker
 安装必要的一些系统工具
 sudo yum install -y yum-utils device-mapper-persistent-data lvm2
 添加软件源信息
@@ -42,3 +42,5 @@ SHOW MASTER STATUS;//后面需要根据此来做同步
 slave2启动   docker run --name tp_mysql_slave_2  -e MYSQL_ROOT_PASSWORD=xxx -v /etc/localtime:/etc/localtime:ro   -v /usr/local/docker/slave2_docker_config:/etc/mysql/mysql.conf.d  -p 3323:3306   mysql:5.7
 slave1启动   docker run --name tp_mysql_slave_1  -e MYSQL_ROOT_PASSWORD=XXX -v /etc/localtime:/etc/localtime:ro   -v /usr/local/docker/slave_docker_config:/etc/mysql/mysql.conf.d  -p 3322:3306   mysql:5.7  //端口不能重复
 
+
+1
