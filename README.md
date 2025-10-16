@@ -2,11 +2,6 @@
 docker实现mysql数据库集群
 Mysql一主多从配置
 
-
-
-
-
-
 环境：
 centos 7.0
 tomcat 5.7
